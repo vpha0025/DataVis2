@@ -7,7 +7,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/map/js/vic_lga.topojson",
+          "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/code/js/vic_lga.topojson",
           "format": {"type": "topojson", "feature": "vic_lga"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
