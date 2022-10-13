@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Car Accidents in Victoria 2020",
+    "width": 850,
+    "height": 400,
+    "projection": {"type": "equirectangular"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/map/js/vic_lga.topojson",
+          "format": {"type": "topojson", "feature": "vic_lga"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/clean.csv"
+        },
+        "mark": {"type": "circle", "color":"purple"},
+        "encoding": {
+          "longitude": {"field": "Long", "type": "quantitative"},
+          "latitude": {"field": "Lat", "type": "quantitative"},
+          "tooltip": 
+          [{"field": "ACCIDENT_NO", "type": "ordinal", "title":"Accident No."},
+          {"field": "LGA_NAME_ALL", "type": "nominal", "title":"Local Government Area"},
+          {"field": "NO_OF_VEHICLES", "type": "quantitative", "title":"No. of Vehicles"},
+          {"field": "NO_PERSONS", "type": "quantitative", "title":"No. of People"},
+          {"field": "Vehicle.Type.Desc", "type": "nominal", "title":"Vehicle Type"}
+        ]
+        }
+      }
+    ]
+  }
