@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "2019 Road Death by Road User"},
+    "width": 300,
+    "height": 320,
+    "background": "#ebebebee",
+    "data": {
+    "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
+    },
+    "transform": [{
+        "aggregate": [{
+          "op": "count", "as": "Road_user"}],
+        "groupby": ["RD_U_DESC"]
+      }],
+    
+    "mark": {"type": "bar", "color": "#815ac0", "tooltip":true},
+    "encoding": {
+        "x": { "field": "Road_user", "type": "quantitative", "title":"No. of Road Death"},
+        "y": { "field": "RD_U_DESC", "type": "nominal", "title":"Road User Type"}
+
+    }
+}

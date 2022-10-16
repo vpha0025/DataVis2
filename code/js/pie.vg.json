@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "2019 Road Death by Age Group"},
+    "width": 300,
+    "height": 320,
+    "background": "#ebebebee",
+    "data": {
+    "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
+    },
+    "encoding": {
+      "theta": {"aggregate": "count","field": "AGE","type": "quantitative","stack": true},
+      "color": {"bin":{"step":20},"field": "AGE","type": "ordinal", "title": "Age Group",
+    "scale":{"range":["#6247aa","#815ac0","#a06cd5","#c19ee0","#dec9e9"]}
+      }
+    },
+    "layer": [
+      {"mark": {"type": "arc", "radius": 85, "radius2": 40}},
+      {"mark": {"type": "text", "radius": 95, "fill": "black"},
+        "encoding": {
+          "text": {"aggregate": "count", "field": "size", "type": "ordinal"}
+        }
+      }
+    ]
+  }

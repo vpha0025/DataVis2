@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "2019 Road Death by Gender"},
+    "width": 300,
+    "height": 320,
+    "background": "#ebebebee",
+    "data": {
+    "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
+    },
+    "transform": [{
+        "aggregate": [{
+          "op": "count", "as": "gender"}],
+        "groupby": ["SEX"]
+      }],
+    
+    "mark": {"type": "bar"},
+    "encoding": {
+        "x": {"field": "SEX", "type": "nominal", "title":"Gender"},
+        "y": {"field": "gender", "type": "quantitative", "title":""},
+        "tooltip": {"field":"gender", "type": "quantitative", "title":"count"},
+        "color": {"field": "SEX", "type": "nominal", "title":"Gender", "legend":null, 
+          "scale":{"range":["#dec9e9","#815ac0"]}}
+    }
+}

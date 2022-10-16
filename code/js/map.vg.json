@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Car Accidents in Victoria 2020",
-    "width": 850,
-    "height": 400,
+    "title": {"text": "Road Death in Victoria 2019", "fontSize":20},
+    "width": 950,
+    "height": 750,
+    "background": "#ebebebee",
     "projection": {"type": "equirectangular"},
     "layer": [
       {
@@ -10,22 +11,20 @@
           "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/code/js/vic_lga.topojson",
           "format": {"type": "topojson", "feature": "vic_lga"}
         },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+        "mark": {"type": "geoshape", "fill":"white", "stroke": "darkslategray"}
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/clean.csv"
+          "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
         },
-        "mark": {"type": "circle", "color":"purple"},
+        "mark": {"type": "point", "color": "#815ac0"},
         "encoding": {
           "longitude": {"field": "Long", "type": "quantitative"},
           "latitude": {"field": "Lat", "type": "quantitative"},
           "tooltip": 
           [{"field": "ACCIDENT_NO", "type": "ordinal", "title":"Accident No."},
           {"field": "LGA_NAME_ALL", "type": "nominal", "title":"Local Government Area"},
-          {"field": "NO_OF_VEHICLES", "type": "quantitative", "title":"No. of Vehicles"},
-          {"field": "NO_PERSONS", "type": "quantitative", "title":"No. of People"},
-          {"field": "Vehicle.Type.Desc", "type": "nominal", "title":"Vehicle Type"}
+          {"field": "RD_U_DESC", "type": "nominal", "title":"Vehicle Type"}
         ]
         }
       }
