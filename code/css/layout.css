@@ -11,12 +11,19 @@ h1 {
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-p {
+h2 {
+    text-align: left;
     color: #000000;
-    font-weight: bold;
     font-size: 16px;
     font-family: Verdana, Tahoma, sans-serif;
 }
+
+p {text-align: left;
+    color: #000000;
+    font-size: 14px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
 
 
 .grid-container {

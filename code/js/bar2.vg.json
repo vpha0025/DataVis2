@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text": "Road Deaths by Gender"},
     "width": 300,
-    "height": 320,
+    "height": 285,
     "background": "#ebebebee",
     "data": {
     "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
