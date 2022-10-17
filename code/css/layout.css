@@ -1,25 +1,29 @@
 html,
 body {
-    background-color: #ffffff;
-}
-
-.pure-u-1-1 {
-    margin-top: 50px;
-    height: 50vw;
-}
-
-.pure-u-1-2 {
-    margin-top: 50px;
-    height: 25vw;
+    background-color: #f8f0fcd7;
 }
 
 h1 {
     text-align: center;
-    color: #000000;
+    color: #6247aa;
+    font-weight: bold;
     font-size: 40px;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 p {
     color: #000000;
+    font-weight: bold;
     font-size: 16px;
+    font-family: Verdana, Tahoma, sans-serif;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .grid-item {
+    text-align: center;
+  } 

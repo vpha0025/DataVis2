@@ -1,15 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "2019 Road Death by Time of Day"},
+    "title": {"text": "Road Deaths by Month"},
     "width": 300,
     "height": 320,
     "background": "#ebebebee",
     "data": {
     "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
     },
-    "mark": {"type": "line","tooltip": true},
+    "mark": {"type": "line","color": "#815ac0","tooltip": true},
     "encoding": {
-        "x": {"field": "ACCIDENTTIME", "timeUnit": {"unit":"hoursminutes","step": 6}, "type": "temporal"},
-        "y": {"aggregate": "count","field": "ACCIDENT_NO","type": "quantitative"}
+        "x": {"field": "ACCIDENTDATE", "timeUnit": "month", "type": "temporal","title":"Month"},
+        "y": {"aggregate": "count","field": "ACCIDENT_NO", "title":"No. of Road Deaths", "scale":{"domain":[0,20]}}
     }
 }

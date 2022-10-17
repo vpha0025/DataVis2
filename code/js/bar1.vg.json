@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "2019 Road Death by Road User"},
+    "title": {"text": "Road Deaths by Road User"},
     "width": 300,
     "height": 320,
     "background": "#ebebebee",

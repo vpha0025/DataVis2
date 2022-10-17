@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "Road Death in Victoria 2019", "fontSize":20},
+    "title": {"text": "Road Deaths in Victoria", "fontSize":20},
     "width": 950,
     "height": 750,
     "background": "#ebebebee",

@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "2019 Road Death by Age Group"},
+    "title": {"text": "Road Deaths by Age Group"},
     "width": 300,
     "height": 320,
     "background": "#ebebebee",
@@ -14,7 +14,8 @@
       }
     },
     "layer": [
-      {"mark": {"type": "arc", "radius": 85, "radius2": 40}},
+      {"mark": {"type": "arc", "radius": 40, "radius2":  85}},
+      
       {"mark": {"type": "text", "radius": 95, "fill": "black"},
         "encoding": {
           "text": {"aggregate": "count", "field": "size", "type": "ordinal"}
