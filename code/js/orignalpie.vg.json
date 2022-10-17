@@ -7,12 +7,9 @@
     "data": {
     "url": "https://raw.githubusercontent.com/vpha0025/DataVis2/main/data/fatalities.csv"
     },
-    "transform":[{
-      "field":"AGE","bin":{"binned":true,"step":20}, "as":"Age Range"}
-    ],
     "encoding": {
       "theta": {"aggregate": "count","field": "AGE","type": "quantitative","stack": true},
-      "color": {"field": "Age Range","type": "ordinal",
+      "color": {"bin":{"step":20}, "field": "AGE","type": "ordinal", "title":"Age Range",
         "scale":{"range":["#6247aa","#815ac0","#a06cd5","#c19ee0","#dec9e9"]}
       }
     },

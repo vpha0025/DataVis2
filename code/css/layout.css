@@ -5,7 +5,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #6247aa;
+    color: #744888;
     font-weight: bold;
     font-size: 40px;
     font-family: Verdana, Tahoma, sans-serif;
@@ -18,15 +18,19 @@ h2 {
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-p {text-align: left;
+p {
+    text-align: center;
     color: #000000;
     font-size: 14px;
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-
+#map {
+    text-align: center;
+}
 
 .grid-container {
+    
     display: grid;
     grid-template-columns: auto auto;
   }
